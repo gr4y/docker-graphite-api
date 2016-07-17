@@ -9,7 +9,7 @@ whisper:
     - /data/graphite/storage/whisper
 carbon:
   hosts:
-    - 127.0.0.1:7002
+    - graphite:7002
   timeout: 1
   retry_delay: 15
   carbon_prefix: carbon
