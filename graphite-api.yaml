@@ -1,4 +1,4 @@
-search_index: /data/graphite/index
+search_index: /data/graphite/storage/index
 finders:
   - graphite_api.finders.whisper.WhisperFinder
 functions:
@@ -6,5 +6,12 @@ functions:
   - graphite_api.functions.PieFunctions
 whisper:
   directories:
-    - /data/graphite/whisper
+    - /data/graphite/storage/whisper
+carbon:
+  hosts:
+    - 127.0.0.1:7002
+  timeout: 1
+  retry_delay: 15
+  carbon_prefix: carbon
+  replication_factor: 1
 time_zone: UTC
